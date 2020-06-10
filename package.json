@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "serve-watch": "nodemon server.js",
-    "serve:prod": "NODE_ENV=production node src/server.js"
+    "serve:prod": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "compression": "^1.7.4",
