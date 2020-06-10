@@ -47,10 +47,10 @@ const setupServer = async () => {
       });
   } else {
     server = http.createServer(app);
-    server.listen(SERVER_PORT, () => {
-      console.log(`cytommi dev server listening on port ${SERVER_PORT}`);
-    });
   }
+  server.listen(SERVER_PORT, () => {
+    console.log(`cytommi dev server listening on port ${SERVER_PORT}`);
+  });
 };
 
 setupServer();
