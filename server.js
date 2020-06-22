@@ -20,7 +20,17 @@ const setupServer = async () => {
   app.get("/resume", (req, res) => {
     res.sendFile(path.join(__dirname, `./dist/files/resume.pdf`));
   });
-  app.get("/", async (req, res) => {
+
+  app.get("/about", async (req, res) => {
+    res.sendFile(path.join(__dirname, "./dist/views/about.html"));
+  });
+  app.get("/portfolio", async (req, res) => {
+    res.sendFile(path.join(__dirname, "./dist/views/portfolio.html"));
+  });
+  app.get("/contact", async (req, res) => {
+    res.sendFile(path.join(__dirname, "./dist/views/contact.html"));
+  });
+  app.get("*", async (req, res) => {
     res.sendFile("index.html");
   });
   let server;
@@ -48,8 +58,6 @@ const setupServer = async () => {
   } else {
     server = http.createServer(app);
   }
-
-
 
   server.listen(SERVER_PORT, () => {
     console.log(`cytommi server listening on port ${SERVER_PORT}`);

@@ -87,7 +87,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scaleY(0.5);
   a {
-    color: transparent;
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -129,23 +129,23 @@ body {
 // Desktop-only animation
 @media only screen and (min-width: 700px) {
   #name-container {
-    animation: fly-to-right 1s ease forwards 3.3s;
+    animation: fly-to-right 0.7s ease forwards 3.3s;
   }
   #links-container {
-    animation: fly-to-left 1s ease forwards 4.4s;
+    animation: fly-to-left 0.7s ease forwards 4.2s;
     text-align: right;
 
     a:nth-child(1) {
-      animation: a-1 0.3s ease forwards 5.5s;
+      animation: a-1 0.3s ease forwards 5s;
     }
     a:nth-child(2) {
-      animation: a-2 0.3s ease forwards 5.5s;
+      animation: a-2 0.3s ease forwards 5s;
     }
     a:nth-child(3) {
-      animation: a-3 0.3s ease forwards 5.5s;
+      animation: a-3 0.3s ease forwards 5s;
     }
     a:hover {
-      text-decoration: line-through;
+      text-decoration-color: #3edfd5;
       .hover-highlight {
         color: #3edfd5;
       }
@@ -169,7 +169,11 @@ body {
   }
 
   @keyframes a-1 {
+    from {
+      color: transparent;
+    }
     to {
+      color: white;
       transform: translateY(-200%);
       color: white;
     }
@@ -181,7 +185,11 @@ body {
   }
 
   @keyframes a-3 {
+    from {
+      color: transparent;
+    }
     to {
+      color: white;
       transform: translateY(100%);
       color: white;
     }

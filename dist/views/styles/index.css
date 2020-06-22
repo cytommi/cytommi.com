@@ -112,7 +112,7 @@ body {
 }
 
 #links-container a {
-  color: transparent;
+  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -186,28 +186,29 @@ body {
 
 @media only screen and (min-width: 700px) {
   #name-container {
-    -webkit-animation: fly-to-right 1s ease forwards 3.3s;
-            animation: fly-to-right 1s ease forwards 3.3s;
+    -webkit-animation: fly-to-right 0.7s ease forwards 3.3s;
+            animation: fly-to-right 0.7s ease forwards 3.3s;
   }
   #links-container {
-    -webkit-animation: fly-to-left 1s ease forwards 4.4s;
-            animation: fly-to-left 1s ease forwards 4.4s;
+    -webkit-animation: fly-to-left 0.7s ease forwards 4.2s;
+            animation: fly-to-left 0.7s ease forwards 4.2s;
     text-align: right;
   }
   #links-container a:nth-child(1) {
-    -webkit-animation: a-1 0.3s ease forwards 5.5s;
-            animation: a-1 0.3s ease forwards 5.5s;
+    -webkit-animation: a-1 0.3s ease forwards 5s;
+            animation: a-1 0.3s ease forwards 5s;
   }
   #links-container a:nth-child(2) {
-    -webkit-animation: a-2 0.3s ease forwards 5.5s;
-            animation: a-2 0.3s ease forwards 5.5s;
+    -webkit-animation: a-2 0.3s ease forwards 5s;
+            animation: a-2 0.3s ease forwards 5s;
   }
   #links-container a:nth-child(3) {
-    -webkit-animation: a-3 0.3s ease forwards 5.5s;
-            animation: a-3 0.3s ease forwards 5.5s;
+    -webkit-animation: a-3 0.3s ease forwards 5s;
+            animation: a-3 0.3s ease forwards 5s;
   }
   #links-container a:hover {
-    text-decoration: line-through;
+    -webkit-text-decoration-color: #3edfd5;
+            text-decoration-color: #3edfd5;
   }
   #links-container a:hover .hover-highlight {
     color: #3edfd5;
@@ -243,14 +244,22 @@ body {
     }
   }
   @-webkit-keyframes a-1 {
+    from {
+      color: transparent;
+    }
     to {
+      color: white;
       -webkit-transform: translateY(-200%);
               transform: translateY(-200%);
       color: white;
     }
   }
   @keyframes a-1 {
+    from {
+      color: transparent;
+    }
     to {
+      color: white;
       -webkit-transform: translateY(-200%);
               transform: translateY(-200%);
       color: white;
@@ -267,14 +276,22 @@ body {
     }
   }
   @-webkit-keyframes a-3 {
+    from {
+      color: transparent;
+    }
     to {
+      color: white;
       -webkit-transform: translateY(100%);
               transform: translateY(100%);
       color: white;
     }
   }
   @keyframes a-3 {
+    from {
+      color: transparent;
+    }
     to {
+      color: white;
       -webkit-transform: translateY(100%);
               transform: translateY(100%);
       color: white;
