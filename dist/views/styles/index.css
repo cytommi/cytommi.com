@@ -10,13 +10,11 @@ a {
   text-decoration: none;
 }
 
-body {
-  background: #000;
-  width: 100%;
-  height: 100vh;
+#landing {
+  background: black;
 }
 
-#name-container {
+#landing #name-container {
   z-index: 2;
   padding: 2px;
   position: absolute;
@@ -27,98 +25,102 @@ body {
   background-color: black;
 }
 
-#name-container svg {
+#landing #name-container svg {
   width: 100%;
   -webkit-animation: fill 2s ease forwards 3s;
           animation: fill 2s ease forwards 3s;
 }
 
-#name-container svg path:nth-child(1) {
+#landing #name-container svg path:nth-child(1) {
   stroke-dasharray: 344;
   stroke-dashoffset: 344;
   -webkit-animation: line-animation 2s ease forwards 0.8s;
           animation: line-animation 2s ease forwards 0.8s;
 }
 
-#name-container svg path:nth-child(2) {
+#landing #name-container svg path:nth-child(2) {
   stroke-dasharray: 527;
   stroke-dashoffset: 527;
   -webkit-animation: line-animation 2s ease forwards 0.8s;
           animation: line-animation 2s ease forwards 0.8s;
 }
 
-#name-container svg path:nth-child(3) {
+#landing #name-container svg path:nth-child(3) {
   stroke-dasharray: 477;
   stroke-dashoffset: 477;
   -webkit-animation: line-animation 2s ease forwards 0.9s;
           animation: line-animation 2s ease forwards 0.9s;
 }
 
-#name-container svg path:nth-child(4) {
+#landing #name-container svg path:nth-child(4) {
   stroke-dasharray: 575;
   stroke-dashoffset: 575;
   -webkit-animation: line-animation 2s ease forwards 0.4s;
           animation: line-animation 2s ease forwards 0.4s;
 }
 
-#name-container svg path:nth-child(5) {
+#landing #name-container svg path:nth-child(5) {
   stroke-dasharray: 450;
   stroke-dashoffset: 450;
   -webkit-animation: line-animation 2s ease forwards 0.7s;
           animation: line-animation 2s ease forwards 0.7s;
 }
 
-#name-container svg path:nth-child(6) {
+#landing #name-container svg path:nth-child(6) {
   stroke-dasharray: 498;
   stroke-dashoffset: 498;
   -webkit-animation: line-animation 2s ease forwards 0.3s;
           animation: line-animation 2s ease forwards 0.3s;
 }
 
-#name-container svg path:nth-child(7) {
+#landing #name-container svg path:nth-child(7) {
   stroke-dasharray: 727;
   stroke-dashoffset: 727;
   -webkit-animation: line-animation 2s ease forwards 0.4s;
           animation: line-animation 2s ease forwards 0.4s;
 }
 
-#name-container svg path:nth-child(8) {
+#landing #name-container svg path:nth-child(8) {
   stroke-dasharray: 450;
   stroke-dashoffset: 450;
   -webkit-animation: line-animation 2s ease forwards 0.5s;
           animation: line-animation 2s ease forwards 0.5s;
 }
 
-#name-container svg path:nth-child(9) {
+#landing #name-container svg path:nth-child(9) {
   stroke-dasharray: 540;
   stroke-dashoffset: 540;
   -webkit-animation: line-animation 2s ease forwards 0.2s;
           animation: line-animation 2s ease forwards 0.2s;
 }
 
-#name-container svg path:nth-child(10) {
+#landing #name-container svg path:nth-child(10) {
   stroke-dasharray: 507;
   stroke-dashoffset: 507;
   -webkit-animation: line-animation 2s ease forwards 0.4s;
           animation: line-animation 2s ease forwards 0.4s;
 }
 
-#links-container {
+#landing #links-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scaleY(0.5);
-          transform: translate(-50%, -50%) scaleY(0.5);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
 }
 
-#links-container a {
+#landing #links-container a {
+  margin: 0.3em 0;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  font-size: x-large;
+  font-size: large;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
@@ -154,64 +156,36 @@ body {
   }
 }
 
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: translate(2px, 0);
-            transform: translate(2px, 0);
-  }
-  50% {
-    -webkit-transform: translate(-2px, 0);
-            transform: translate(-2px, 0);
-  }
-  100% {
-    -webkit-transform: translate(2px, 0);
-            transform: translate(2px, 0);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    -webkit-transform: translate(2px, 0);
-            transform: translate(2px, 0);
-  }
-  50% {
-    -webkit-transform: translate(-2px, 0);
-            transform: translate(-2px, 0);
-  }
-  100% {
-    -webkit-transform: translate(2px, 0);
-            transform: translate(2px, 0);
-  }
-}
-
 @media only screen and (min-width: 700px) {
-  #name-container {
-    -webkit-animation: fly-to-right 0.7s ease forwards 3.3s;
-            animation: fly-to-right 0.7s ease forwards 3.3s;
+  #landing #name-container {
+    -webkit-animation: fly-to-right 0.7s ease-in-out forwards 3.3s;
+            animation: fly-to-right 0.7s ease-in-out forwards 3.3s;
   }
-  #links-container {
-    -webkit-animation: fly-to-left 0.7s ease forwards 4.2s;
-            animation: fly-to-left 0.7s ease forwards 4.2s;
+  #landing #links-container {
+    top: 50%;
+    left: 30%;
+    -webkit-transform: translate(-100%, -50%);
+            transform: translate(-100%, -50%);
+    -webkit-animation: fade-in 1.5s ease-in-out forwards 3.2s;
+            animation: fade-in 1.5s ease-in-out forwards 3.2s;
     text-align: right;
   }
-  #links-container a:nth-child(1) {
-    -webkit-animation: a-1 0.3s ease forwards 5s;
-            animation: a-1 0.3s ease forwards 5s;
+  #landing #links-container a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, right top, from(#ff7d1f), color-stop(50%, #ff7d1f), color-stop(50%, white));
+    background: linear-gradient(to right, #ff7d1f, #ff7d1f 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-transition: background-position 275ms ease;
+    transition: background-position 275ms ease;
   }
-  #links-container a:nth-child(2) {
-    -webkit-animation: a-2 0.3s ease forwards 5s;
-            animation: a-2 0.3s ease forwards 5s;
-  }
-  #links-container a:nth-child(3) {
-    -webkit-animation: a-3 0.3s ease forwards 5s;
-            animation: a-3 0.3s ease forwards 5s;
-  }
-  #links-container a:hover {
-    -webkit-text-decoration-color: #3edfd5;
-            text-decoration-color: #3edfd5;
-  }
-  #links-container a:hover .hover-highlight {
-    color: #3edfd5;
+  #landing #links-container a:hover {
+    background-position: 0 100%;
   }
   @-webkit-keyframes fly-to-right {
     to {
@@ -225,84 +199,42 @@ body {
               transform: translate(-30%, -50%);
     }
   }
-  @-webkit-keyframes fly-to-left {
-    to {
-      z-index: 3;
-      left: 35%;
-      top: 50%;
-      -webkit-transform: translate(-12.5em, -50%) scaleY(1);
-              transform: translate(-12.5em, -50%) scaleY(1);
-    }
-  }
-  @keyframes fly-to-left {
-    to {
-      z-index: 3;
-      left: 35%;
-      top: 50%;
-      -webkit-transform: translate(-12.5em, -50%) scaleY(1);
-              transform: translate(-12.5em, -50%) scaleY(1);
-    }
-  }
-  @-webkit-keyframes a-1 {
+  @-webkit-keyframes fade-in {
     from {
-      color: transparent;
+      opacity: 0;
     }
     to {
-      color: white;
-      -webkit-transform: translateY(-200%);
-              transform: translateY(-200%);
-      color: white;
+      opacity: 1;
     }
   }
-  @keyframes a-1 {
+  @keyframes fade-in {
     from {
-      color: transparent;
+      opacity: 0;
     }
     to {
-      color: white;
-      -webkit-transform: translateY(-200%);
-              transform: translateY(-200%);
-      color: white;
-    }
-  }
-  @-webkit-keyframes a-2 {
-    to {
-      color: white;
-    }
-  }
-  @keyframes a-2 {
-    to {
-      color: white;
-    }
-  }
-  @-webkit-keyframes a-3 {
-    from {
-      color: transparent;
-    }
-    to {
-      color: white;
-      -webkit-transform: translateY(100%);
-              transform: translateY(100%);
-      color: white;
-    }
-  }
-  @keyframes a-3 {
-    from {
-      color: transparent;
-    }
-    to {
-      color: white;
-      -webkit-transform: translateY(100%);
-              transform: translateY(100%);
-      color: white;
+      opacity: 1;
     }
   }
 }
 
 @media only screen and (max-width: 699px) {
-  #name-container {
-    -webkit-animation: go-up 2.5s ease forwards 3.3s;
-            animation: go-up 2.5s ease forwards 3.3s;
+  #landing #name-container {
+    -webkit-animation: go-up 2s ease forwards 3.3s;
+            animation: go-up 2s ease forwards 3.3s;
+  }
+  #landing #links-container {
+    z-index: 3;
+    -webkit-animation: go-down 1.5s ease forwards 3.3s;
+            animation: go-down 1.5s ease forwards 3.3s;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scaleY(0);
+            transform: translate(-50%, -50%) scaleY(0);
+  }
+  #landing #links-container a {
+    font-size: larger;
+    margin: 0.5em 0;
   }
   @-webkit-keyframes go-up {
     to {
@@ -322,6 +254,30 @@ body {
       left: 50%;
       -webkit-transform: translateX(-50%) scale(1.4);
               transform: translateX(-50%) scale(1.4);
+    }
+  }
+  @-webkit-keyframes go-down {
+    from {
+      opacity: 0;
+      -webkit-transform: translate(-50%, -50%) scaleY(0.6);
+              transform: translate(-50%, -50%) scaleY(0.6);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -35%) scaleY(1);
+              transform: translate(-50%, -35%) scaleY(1);
+    }
+  }
+  @keyframes go-down {
+    from {
+      opacity: 0;
+      -webkit-transform: translate(-50%, -50%) scaleY(0.6);
+              transform: translate(-50%, -50%) scaleY(0.6);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -35%) scaleY(1);
+              transform: translate(-50%, -35%) scaleY(1);
     }
   }
 }

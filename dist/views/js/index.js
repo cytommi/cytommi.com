@@ -1,6 +1,6 @@
-const paths = document.querySelectorAll('#left-box svg path')
-paths.forEach((p, i) => {
-    totalLength = p.getTotalLength();
-    console.log(i, totalLength)
-   
-})
+new fullpage("#fullpage", {
+  autoScrolling: true,
+  navigation: true,
+});
+
+fullpage_api.setAllowScrolling(false);

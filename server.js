@@ -18,18 +18,9 @@ const setupServer = async () => {
   app.use(express.static(path.join(__dirname, `./dist/views`)));
 
   app.get("/resume", (req, res) => {
-    res.sendFile(path.join(__dirname, `./dist/files/resume.pdf`));
+    res.sendFile(path.resolve(__dirname, `./dist/files/resume.pdf`));
   });
 
-  app.get("/about", async (req, res) => {
-    res.sendFile(path.join(__dirname, "./dist/views/about.html"));
-  });
-  app.get("/portfolio", async (req, res) => {
-    res.sendFile(path.join(__dirname, "./dist/views/portfolio.html"));
-  });
-  app.get("/contact", async (req, res) => {
-    res.sendFile(path.join(__dirname, "./dist/views/contact.html"));
-  });
   app.get("*", async (req, res) => {
     res.sendFile("index.html");
   });
