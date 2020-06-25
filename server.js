@@ -22,7 +22,7 @@ const setupServer = async () => {
   });
 
   app.get("*", async (req, res) => {
-    res.sendFile("index.html");
+    res.sendFile(path.join(__dirname, "./dist/views/index.html"));
   });
   let server;
 
