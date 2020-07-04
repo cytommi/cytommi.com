@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "serve-watch": "nodemon server.js",
+    "sass-watch": "sass --watch dist/views/sass:dist/views/styles",
     "serve:prod": "NODE_ENV=production node server.js"
   },
   "dependencies": {

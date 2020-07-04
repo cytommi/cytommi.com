@@ -1,12 +1,14 @@
-#landing {
+#home {
   background: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   #animation-container {
     width: 70%;
+    max-width: 1300px;
 
     #name-container {
       background-color: black;
@@ -67,19 +69,53 @@
       stroke-dashoffset: 507;
       animation: line-animation 2s ease forwards 0.4s;
     }
+  }
+  h2 {
+    font-family: "Crimson Pro", serif;
+    color: white;
+    font-weight: 200;
+    font-size: xx-large;
+    margin-left: 1em;
+    opacity: 0;
+    animation: fade-in 2s ease forwards 3s;
+  }
 
-    #links-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      a {
-        margin: 0.2em 0;
-        opacity: 0;
-        font-size: x-large;
-        font-family: "Montserrat", sans-serif;
-        text-decoration: none;
-        text-transform: uppercase;
-        animation: fade-in 1.65s ease-out forwards 3.25s;
+  #dots-container {
+    $dot-r: 0.5em;
+    $dot-d: $dot-r * 2;
+    width: $dot-d;
+    position: absolute;
+    bottom: 8em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .scroll-dot {
+      width: $dot-d;
+      height: $dot-d;
+      border-radius: 50%;
+      margin: 0.2em;
+    }
+    #scroll-dot-1 {
+      animation: drip 2s infinite 3s;
+    }
+    #scroll-dot-2 {
+      animation: drip 2s infinite 3.13s;
+    }
+    #scroll-dot-3 {
+      animation: drip 2s infinite 3.26s;
+    }
+    @keyframes drip {
+      0% {
+        background-color: black;
+      }
+      50%{
+        background-color: black;
+      }
+      75% {
+        background-color: #383838;
       }
     }
   }
@@ -99,7 +135,6 @@
     fill: white;
   }
 }
-
 @keyframes fade-in {
   to {
     opacity: 1;
@@ -115,30 +150,12 @@
     justify-content: center;
     padding: 2% 3.5%;
     border: 2px solid transparent;
-    animation: border-fade-in 2s ease-in-out forwards 3.2s;
+    animation: border-fade-in 2s ease-in-out forwards 3.3s;
     #name-container {
       top: 50%;
       right: 0;
       padding-right: 1em;
       align-self: center;
-    }
-    #links-container {
-      padding-left: 1em;
-      left: 0;
-      a {
-        display: inline-block;
-        overflow: hidden;
-        background: linear-gradient(to right, #ff7d1f, #ff7d1f 50%, white 50%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 200% 100%;
-        background-position: 100%;
-        transition: background-position 275ms ease;
-        &:hover {
-          background-position: 0 100%;
-        }
-      }
     }
   }
   @keyframes border-fade-in {
@@ -151,21 +168,15 @@
 /** Mobile Specific */
 @media only screen and (max-width: 700px) {
   #animation-container {
-    padding: 1em;
+    padding: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    animation: border-fade-in 2s ease-in-out forwards 3.2s;
+    animation: border-fade-in 2s ease-in-out forwards 3.3s;
     border: solid 2px transparent;
-    #links-container {
-      padding-top: 1em;
-      a {
-        color: white;
-        font-size: small;
-        margin: 0.5em 0;
-        text-align: right;
-      }
+    h2 {
+      margin: 0.5em 0 0 0;
     }
   }
   @keyframes border-fade-in {

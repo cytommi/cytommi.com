@@ -7,18 +7,12 @@
   </head>
   <body>
     <div id="scroll-container">
-      <div id="scroll-dots">
-        <div id="landing-dot"/>
-        <div id="about-dot"/>
-        <div id="portfolio-dot"/>
-        <div id="contact-dot"/>
-      </div>
-      <section id="landing" >
+      <section id="home">
         <div id="animation-container">
           <div id="name-container">
             <svg
               viewBox="0 0 775 118"
-              preserveAspectRatio="xMidYMid meet" 
+              preserveAspectRatio="xMidYMid meet"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -74,30 +68,139 @@
               />
             </svg>
           </div>
-  
-          <div id="links-container">
-            <a href="https://blog.cytommi.com">blog</a>
-            <a href="/#about">about</a>
-            <a href="/#portfolio">portfolio</a>
-            <a href="/#contact">contact</a>
+          <h2>a software engineer.</h2>
+        </div>
+
+        <div id="dots-container">
+          <div id="scroll-dot-1" class="scroll-dot"></div>
+          <div id="scroll-dot-2" class="scroll-dot"></div>
+          <div id="scroll-dot-3" class="scroll-dot"></div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h1>
+          Hi, I am a software engineer.
+        </h1>
+      </section>
+      <section id="timeline">
+        <div id="content-container">
+          <div id="gallery-container">
+            <img
+              id="y2017-p1"
+              class="gallery-image"
+              src="./images/y2017-p1.jpg"
+              alt="y2017-p1"
+            />
+            <img
+              id="y2017-p2"
+              class="gallery-image"
+              src="./images/y2017-p2.JPG"
+              alt="y2017-p2"
+            />
+            <img
+              id="y2018-p1"
+              class="gallery-image"
+              src="./images/y2018-p1.JPG"
+              alt="y2018-p1"
+            />
+            <img
+              id="y2019-p1"
+              class="gallery-image"
+              src="./images/y2019-p1.png"
+              alt="y2019-p1"
+            />
+            <img
+              id="y2019-p2"
+              class="gallery-image"
+              src="./images/y2019-p2.jpg"
+              alt="y2019-p2"
+            />
+            <img
+              id="y2020-p1"
+              class="gallery-image"
+              src="./images/y2020-p1.JPG"
+              alt="y2020-p1"
+            />
+            <img
+              id="y2020-p2"
+              class="gallery-image"
+              src="./images/y2020-p2.JPG"
+              alt="y2020-p2"
+            />
           </div>
-        </section>   
-        <section id="about" >
-          <h1>hi</h1>
-        </section>
-        <section id="portfolio" >
-          <h1>hi</h1>
-        </section>
-        <section id="contact" >
-          <h1>hi</h1>
-        </section>
-       </div>
-        
 
-   
+          <div id="description-container">
+            <h1 id="description-header"></h1>
+            <hr id="description-line-break" />
+            <p id="description-body">
+              Graduated from UWC ISAK Japan with an International Baccalaureate
+              Diploma.
+            </p>
+          </div>
+          <div id="year-scroll-container">
+            <div id="y2017" class="year-container">
+              <h1 id="y2017-h" onclick="selectYearDot(2017, 1)">2017</h1>
+              <div class="dots-container y2017">
+                <div
+                  id="y2017-1"
+                  class="year-dot y2017"
+                  onclick="selectYearDot(2017, 1)"
+                ></div>
+                <div
+                  id="y2017-2"
+                  class="year-dot y2017"
+                  onclick="selectYearDot(2017, 2)"
+                ></div>
+              </div>
+            </div>
+            <div id="y2018" class="year-container">
+              <h1 id="y2018-h" onclick="selectYearDot(2018, 1)">2018</h1>
+              <div class="dots-container y2018">
+                <!-- <div
+                  id="y2018-1"
+                  class="year-dot y2018"
+                  onclick="selectYearDot(2018, 1)"
+                ></div> -->
+              </div>
+            </div>
+            <div id="y2019" class="year-container">
+              <h1 id="y2019-h" onclick="selectYearDot(2019, 1)">2019</h1>
+              <div class="dots-container y2019">
+                <div
+                  id="y2019-1"
+                  class="year-dot y2019"
+                  onclick="selectYearDot(2019, 1)"
+                ></div>
+                <div
+                  id="y2019-2"
+                  class="year-dot y2019"
+                  onclick="selectYearDot(2019, 2)"
+                ></div>
+              </div>
+            </div>
+            <div id="y2020" class="year-container">
+              <h1 id="y2020-h" onclick="selectYearDot(2020, 1)">2020</h1>
+              <div class="dots-container y2020">
+                <div
+                  id="y2020-1"
+                  class="year-dot y2020"
+                  onclick="selectYearDot(2020, 1)"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <h1>hi</h1>
+      </section>
+      <section id="contact">
+        <h1>hi</h1>
+      </section>
     </div>
-      
-
+    <script src="./js/aos.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
